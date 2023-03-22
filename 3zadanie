@@ -1,3 +1,4 @@
+//Создать список «ToDo List» (Планируемое занятие, Время выполнения (час)). Вывести на экран те действия, которые необходимо выполнить после 14 часов.
 using System;
 using System.Collections.Generic;
 namespace ConsoleApp2
