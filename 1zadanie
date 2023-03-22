@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Размер массива: ");
+
+            int size;
+            while (!int.TryParse(Console.ReadLine(), out size))
+            {
+                Console.WriteLine("Ошибка ввода! Введите целое число a");
+            }
+            int[] array = new int[size];
+            Random random = new Random();
+            int negativeCount = 0;
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write("A[{0}]: ", i);
+                while (!int.TryParse(Console.ReadLine(), out array[i]))
+                {
+                    Console.WriteLine("Ошибка ввода! Введите целое число a");
+                }
+                if (array[i] < 0)
+                    negativeCount++;
+            }
+            Console.WriteLine("\nКоличество отрицательных: " + negativeCount);
+            Console.ReadKey(true);
+        }
+    }
+}
